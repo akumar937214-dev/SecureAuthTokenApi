@@ -41,7 +41,7 @@ namespace SecureAuthApi
 
             // ? Configure Database Context
             builder.Services.AddDbContext<AuthDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DBCon")));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
             // ? Configure Authentication with JWT
             builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
